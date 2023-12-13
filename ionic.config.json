@@ -1,0 +1,7 @@
+{
+  "name": "RecipeManagerV3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
