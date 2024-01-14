@@ -1,0 +1,12 @@
+ion-content {
+  --background: none;
+  //background-image: url('/assets/img/top-view-fresh-tomatoes-oil-bottle-pepper-grinder-kitchen-table-with-copy-place.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-bottom: 60px;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}

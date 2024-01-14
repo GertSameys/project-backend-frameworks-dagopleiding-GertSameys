@@ -1,0 +1,53 @@
+ion-content {
+  --background: none;
+  //background-image: url('/assets/img/top-view-fresh-tomatoes-oil-bottle-pepper-grinder-kitchen-table-with-copy-place.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-bottom: 60px;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+ion-grid {
+  height: 70%; /* Full height of its container */
+}
+
+ion-row {
+  height: 50%; /* Each row takes half of the grid's height */
+}
+
+ion-col {
+  text-align: center;
+  align-content: center;
+  height: 100%; /* Each column takes full height of its row */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-button {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height to maintain a square */
+  --padding-start: 0; /* Remove padding for a perfect square */
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --background: transparent;              /* Transparent background */
+  --background-hover: transparent;        /* Transparent background on hover */
+  --background-focused: transparent;      /* Transparent background when focused */
+//  --background-activated: rgba(0, 0, 0, 0.1); /* Slightly darker when activated */
+  //border: #2a2a2a 1px solid; /* Add a border */
+}
+
+ion-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  height: 100px;
+}
+
+
+

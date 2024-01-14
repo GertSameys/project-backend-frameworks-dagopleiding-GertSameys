@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RecipeManagerV3</string>
+    <string name="title_activity_main">RecipeManagerV3</string>
+    <string name="package_name">com.recipemanagerv3.app</string>
+    <string name="custom_url_scheme">com.recipemanagerv3.app</string>
+</resources>

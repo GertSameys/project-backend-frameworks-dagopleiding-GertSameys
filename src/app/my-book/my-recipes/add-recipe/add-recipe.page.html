@@ -1,0 +1,30 @@
+
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="addRecipe()">
+    <!-- Recipe Name -->
+    <ion-item>
+      <ion-label position="floating">Recipe Name</ion-label>
+      <ion-input [(ngModel)]="recipe.name" name="name" required></ion-input>
+    </ion-item>
+    <!-- Other fields for time, ingredients, steps -->
+    <ion-item>
+      <ion-label position="floating">Time to prepare</ion-label>
+      <ion-input [(ngModel)]="recipe.time" name="time" required type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ingredients</ion-label>
+      <ion-input [(ngModel)]="recipe.ingredients" name="ingredients" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Steps</ion-label>
+      <ion-input [(ngModel)]="recipe.steps" name="steps" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Photo</ion-label>
+      <ion-input type="file" (change)="uploadPhoto($event)" accept="image/*"></ion-input>
+    </ion-item>
+    <ion-button type="button" color="medium" (click)="cancel()">Cancel</ion-button>
+    <ion-button type="submit" expand="full" [disabled]="!recipe.name || !recipe.time || !recipe.ingredients || !recipe.steps">Add Recipe</ion-button>
+  </form>
+</ion-content>

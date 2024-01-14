@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">find-recipes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid *ngIf="!isSearched">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="6" size-lg="4">
+        <div class="search-container">
+          <ion-item>
+            <ion-label position="floating">Keyword</ion-label>
+            <ion-input [(ngModel)]="keyword" (ngModelChange)="resetError()"></ion-input>
+          </ion-item>
+          <!-- Display error message if searchError is empty -->
+          <div *ngIf="searchError" class="error-message">
+            {{ searchError }}
+          </div>
+          <ion-button shape="round" expand="full" (click)="searchByKeyword()">Search by Keyword</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Results Section -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let recipe of recipes">
+        <a [href]="recipe.url" target="_blank" rel="noopener noreferrer">
+        <ion-card>
+          <img [src]="recipe.image" *ngIf="recipe.image" />
+          <ion-card-header>
+            <ion-card-title>{{ recipe.label }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Ingredients: {{ recipe.ingredientLines.length }}</p>
+            <p>Servings: {{ recipe.yield }}</p>
+            <p>Calories per Serving: {{ recipe.calories / recipe.yield | number: '1.0-0' }}</p>
+            <p>
+              <ion-icon name="ellipse" style="color: green;"></ion-icon> Protein: {{ recipe.totalNutrients.PROCNT.quantity | number: '1.0-0' }}g
+            </p>
+            <p>
+              <ion-icon name="ellipse" style="color: yellow;"></ion-icon> Fat: {{ recipe.totalNutrients.FAT.quantity | number: '1.0-0' }}g
+            </p>
+            <p>
+              <ion-icon name="ellipse" style="color: red;"></ion-icon> Carbs: {{ recipe.totalNutrients.CHOCDF.quantity | number: '1.0-0' }}g
+            </p>
+          </ion-card-content>
+        </ion-card>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

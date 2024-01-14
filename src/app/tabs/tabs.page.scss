@@ -1,0 +1,24 @@
+ion-tab-bar {
+  --background: rgba(255, 255, 255, 0.05); /* Make tab bar background transparent */
+  backdrop-filter: blur(10px); /* Blur effect */
+  position: absolute;
+  bottom: 0;
+  border-radius: 20px;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 1; /* Send tab bar behind ion-content */
+  --color-selected: blue; /* Color of selected tab */
+  --color: #ffffff; /* Color of unselected tabs */
+  text-shadow: 1px 1px #0093E9;
+}
+
+ion-content {
+  --background: rgba(255, 255, 255, 0.7);
+  background-image: url('/assets/img/top-view-fresh-tomatoes-oil-bottle-pepper-grinder-kitchen-table-with-copy-place.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  position: relative; /* Needed for proper stacking context */
+}
