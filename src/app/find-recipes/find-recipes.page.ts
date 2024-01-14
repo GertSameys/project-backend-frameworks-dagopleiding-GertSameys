@@ -1,6 +1,6 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { catchError, of } from 'rxjs';
+import {ChangeDetectorRef, Component} from '@angular/core'
+import {HttpClient} from '@angular/common/http'
+import {catchError, of} from 'rxjs'
 
 
 interface Recipe {

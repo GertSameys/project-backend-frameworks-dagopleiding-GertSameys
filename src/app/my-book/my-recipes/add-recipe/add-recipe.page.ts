@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
-import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
-import { Auth, authState } from '@angular/fire/auth';
-import { first } from 'rxjs/operators';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core'
+import {addDoc, collection, Firestore} from '@angular/fire/firestore'
+import {getDownloadURL, ref, Storage, uploadBytes} from '@angular/fire/storage'
+import {Auth, authState} from '@angular/fire/auth'
+import {first} from 'rxjs/operators'
+import {Router} from '@angular/router'
 
 
 @Component({

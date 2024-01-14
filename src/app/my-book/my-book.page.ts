@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import {Auth, signInWithPopup, GoogleAuthProvider} from '@angular/fire/auth'
+import {Component} from '@angular/core'
+import {Auth, GoogleAuthProvider, signInWithPopup} from '@angular/fire/auth'
 import {Router} from '@angular/router'
-import { ToastController } from '@ionic/angular';
+import {ToastController} from '@ionic/angular'
 
 @Component({
   selector: 'app-my-book',

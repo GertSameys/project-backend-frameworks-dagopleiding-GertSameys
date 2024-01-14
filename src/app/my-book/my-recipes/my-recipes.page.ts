@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import { Auth, authState } from '@angular/fire/auth';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core'
+import {Auth, authState} from '@angular/fire/auth'
+import {collection, collectionData, Firestore} from '@angular/fire/firestore'
+import {Observable} from 'rxjs'
+import {switchMap} from 'rxjs/operators'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-my-recipes',
